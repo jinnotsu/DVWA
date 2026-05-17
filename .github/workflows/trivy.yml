@@ -27,6 +27,7 @@ jobs:
         with:
           image-ref: 'nginx:1.20-alpine'
           format: 'cyclonedx'
+          scanners: 'vuln'
           output: 'sbom-cyclonedx.json'
           severity: 'HIGH,CRITICAL'
       - name: Upload Trivy scan results
